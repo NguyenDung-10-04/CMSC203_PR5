@@ -1,4 +1,16 @@
 package org.example;
+/*
+ * Class: CMSC203
+ * Instructor: Ahmed Tarek
+ * Description: Holiday Bonus
+ * Due:
+ * Platform/compiler: Intelij
+ * I pledge that I have completed the programming assignment independently.
+ *  I have not copied the code from a student or any source.
+ *  I have not given my code to any student.
+ *  Print your Name here: Dung Nguyen
+ */
+
 public class HolidayBonus {
     private static final double HIGH_BONUS  = 5000;
     private static final double LOW_BONUS   = 1000;

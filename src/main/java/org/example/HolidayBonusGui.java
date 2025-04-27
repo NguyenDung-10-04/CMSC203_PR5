@@ -26,13 +26,7 @@ import javafx.stage.Stage;
 
 import static javafx.application.Application.launch;
 
-/**
- * This class represents the Holiday Bonus GUI.
- *
- * @author Farnaz Eivazi
- * @version 7/13/2022
- *
- */
+
 public class HolidayBonusGui extends Application {
     private double[][] sales;
     public static final int MAX_STORES = 6;

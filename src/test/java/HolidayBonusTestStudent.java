@@ -1,20 +1,13 @@
 
 import static org.junit.Assert.*;
-import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.example.HolidayBonus;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-/**
- * This class represents GFA test cases for a HolidayBonus object.
- *
- * @author Farnaz Eivazi
- * @version 7/13/2022
- *
- */
-public class HolidayBonusGFATest {
+
+public class HolidayBonusTestStudent {
 
     private double[][] dataSet1 = { { 1, 2, 3 }, { 4, 5 }, { 6, 7, 8 } };
 
