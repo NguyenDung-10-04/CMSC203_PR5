@@ -8,78 +8,29 @@ import java.util.Scanner;
 
 public class TwoDimRaggedArrayUtility {
 
-    /**
-     * Reads a ragged array of doubles from a text file. Each line is a row; values separated by whitespace.
-     * Skip blank lines. Return null if file has no data rows.
-     * <p>
-     * Input file example (input.txt):
-     * 1.0 2.5
-     * 3.0 4.0 5.0
-     * <p>
-     * 6.5
-     * <p>
-     * => [1.65 4.50 2.36]
-     * => [2.22 -3.24 -1.66]
-     * => [4.23 2.29 5.29]
-     * <p>
-     * arr[][]
-     * [ [ ],
-     * [ ],
-     * [ ]   ]
-     *
-     * @param file the file to read from
-     * @return a ragged double[][], or null if file is empty
-     * @throws FileNotFoundException if the file cannot be found
-     *                               split
-     */
     public static double[][] readFile(File file) throws FileNotFoundException {
         Scanner fi = new Scanner(file);
-        int rowIndex = 0; // Không biết trước số dòng ( không dùng for loop để gán được mà phải dùng rowIndex + while)
-        // row = double [] =>
-        // row = double [] =>
-        // row = double [] =>
         ArrayList<double []> arr = new ArrayList<>();
-        // double[][] arr = new double[][]; //gán các số trong file vào arr
         while (fi.hasNextLine() ) {
             String line = fi.nextLine().trim(); // Lấy ra từng dòng ( String) "1" "2" "3" "4"
             String[] str = line.split("\\s+"); // [1.65,4.50,2.36,7.45,3.44,6.23]
             double [] row = new double[str.length];
-            for (int i = 0; i < str.length; i++) {
-                    row[i] = Double.parseDouble(str[i]);
-            }
+            for (int i = 0; i < str.length; i++)   row[i] = Double.parseDouble(str[i]);
             arr.add(row);
         }
         fi.close();
         double[][] list2D = new double[arr.size()][];
-            for(int i = 0; i < list2D.length; i++){
-                //for(int j = 0; j < list2D.length; j++){
-                      list2D[i]= arr.get(i);
-               //  }
-            }
+        for(int i = 0; i < list2D.length; i++){
+            //for(int j = 0; j < list2D.length; j++){
+            list2D[i]= arr.get(i);
+            //  }
+        }
 
         return list2D;
     }
 
 
-    /**
-     * Writes a ragged array of doubles to a text file. One row per line, values separated by spaces.
-     * Skip any null rows.
-     * <p>
-     * Input array:
-     * {{1.1, 2.2}, null, {3.3}}
-     * <p>
-     * Output file (out.txt):
-     * 1.1 2.2
-     * 3.3
-     *
-     * @param data       the ragged array to write
-     * @param outputFile the file to write to
-     * @throws FileNotFoundException if the file cannot be created
-     *                               pw.print()
-     *                               123
-     *                               423
-     *                               125
-     */
+
     public static void writeToFile(double[][] data, File outputFile) throws FileNotFoundException {
         PrintWriter pw = new PrintWriter(outputFile);
         for (double[] datum : data) {
